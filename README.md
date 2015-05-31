@@ -60,14 +60,15 @@ Usage
     ```
     
 To display the page title in the title header, make sure that your `layout.phtml` is using `headerTitle()` helper:
-    ```html
-    <?php echo $this->doctype(); ?>
     
-    <html lang="en">
-        <head>
-            <?php echo $this->headTitle('Acme Inc.')->setSeparator(' :: ')->setAutoEscape(false) ?>
-        </head>
-        ...
+```html
+<?php echo $this->doctype(); ?>
+    
+<html lang="en">
+    <head>
+        <?php echo $this->headTitle('Acme Inc.')->setSeparator(' :: ')->setAutoEscape(false) ?>
+    </head>
+```
     
 ## Contributing
 
