@@ -9,19 +9,19 @@ Installation
 
     ```php
     <?php
-        namespace Application;
+    namespace Application;
 
-        class Module
+    class Module
+    {
+        public function getViewHelperConfig()
         {
-            public function getViewHelperConfig()
-            {
-                return array(
-                    'invokables' => array(
-                        'pageTitle' => 'Application\View\Helper\PageTitle'
-                    )
-                );
-            }
+            return array(
+                'invokables' => array(
+                    'pageTitle' => 'Application\View\Helper\PageTitle'
+                )
+            );
         }
+    }
     ```
     
 2. Create `page_titles.global.php` file:
@@ -29,27 +29,27 @@ Installation
     ```php
     <?php
 
-        return array
-            'page_title' => array(
-                // 'user' is controller name
-                'user' => array(
-                    // 'index' and 'show' is action name
-                    'index' => 'Usuários',
-                    'new' => 'Adicionar novo usuário'
-                )
+    return array
+        'page_title' => array(
+            // 'user' is controller name
+            'user' => array(
+                // 'index' and 'show' is action name
+                'index' => 'Usuários',
+                'new' => 'Adicionar novo usuário'
             )
-        );
+        )
+    );
 
     ```
     
 3. Use the helper pageTitle in your view:
 
     ```html
-        <div class="page-header">
-            <h1>
-                <?php echo $this->pageTitle(); ?>
-            </h1>
-        </div>
+    <div class="page-header">
+        <h1>
+            <?php echo $this->pageTitle(); ?>
+        </h1>
+    </div>
     ```
     
 ## Contributing
