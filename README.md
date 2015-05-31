@@ -9,6 +9,7 @@ Installation
 
     ```php
     <?php
+    
     namespace Application;
 
     class Module
