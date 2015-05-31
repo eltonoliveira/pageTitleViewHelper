@@ -22,14 +22,12 @@ class PageTitle extends AbstractHelper implements ServiceLocatorAwareInterface
     /**
      * Returns the page title
      *
-     * @param string|null $namespace
-     *
      * @return string
      */
-    public function __invoke($namespace = null)
+    public function __invoke()
     {
         $routeMatch = $this->getRouteMatch();
-        $controller = $routeMatch->getParam('__CONTROLLER__');
+        $controller = $routeMatch->getParam('controller');
         $action = $routeMatch->getParam('action');
 
         $title = $this->getPageTitle($controller, $action);
