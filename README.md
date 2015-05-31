@@ -23,26 +23,36 @@ Installation
         }
     }
     ```
+2. Set your controller in  `module.config.php` file:
+ 
+    ```php
+    <?php
+
+    'controllers' => array(
+        'invokables' => array(
+            'Application\Controller\Dashboard' => 'Application\Controller\DashboardController',
+        ),
+    ),
+
+    ```
     
-2. Create `page_titles.global.php` file:
+3. Create `page_titles.global.php` file:
  
     ```php
     <?php
 
     return array
         'page_title' => array(
-            // 'user' is controller name
-            'user' => array(
-                // 'index' and 'show' is action name
-                'index' => 'Usuários',
-                'new' => 'Adicionar novo usuário'
+            // controller name
+            'Application\Controller\Dashboard' => array(
+                'index' => 'Dashboard'
             )
         )
     );
 
     ```
     
-3. Use the helper pageTitle in your view:
+4. Use the helper pageTitle in your view:
 
     ```html
     <div class="page-header">
