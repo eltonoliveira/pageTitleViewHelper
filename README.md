@@ -67,7 +67,7 @@ To display the page title in the title header, make sure that your `layout.phtml
         <head>
             <?php echo $this->headTitle('Acme Inc.')->setSeparator(' :: ')->setAutoEscape(false) ?>
         </head>
-        ...
+
     ```
     
 ## Contributing
