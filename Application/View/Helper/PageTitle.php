@@ -32,8 +32,8 @@ class PageTitle extends AbstractHelper implements ServiceLocatorAwareInterface
 
         $title = $this->getPageTitle($controller, $action);
 
-        $viewHelper = $this->getHeadTitleHelper();
-        $viewHelper->prepend($title);
+        $headTitleHelper = $this->getHeadTitleHelper();
+        $headTitleHelper->prepend($title);
 
         return $title;
     }
